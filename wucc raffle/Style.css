@@ -1,0 +1,107 @@
+.block-headline{
+	margin: 3%;
+	padding: 2%;
+	text-align: center;
+	display: inline-block;
+	font-size: 140%;
+}
+
+.comment{
+    font-size: 80%;
+    line-height: 140%;
+    display: inline;
+}
+
+body
+{
+	background-color:lemonchiffon;
+}
+
+/* h1 is used for homepage on the top lefg */
+h1{
+  display: inline-block;
+	text-align:left;
+	font-size:15.5px;
+	font-family:cursive;
+
+}
+
+h2{
+	text-align:left;
+	font-size:220%;
+	color:Blue;
+  padding-bottom: 1px;
+}
+
+h3{
+	/*display: inline-block;*/
+	/*margin-bottom: 3%;*/
+}
+
+p{
+	font-size: 130%;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+  margin-top: 1px;
+}
+.news-block{
+	margin: 1%;
+	overflow: auto;
+	display: inline-block;
+	padding: 2px;
+	width: 30%;
+	height: auto;
+  background-color: yellow;
+	border: 1px solid black;
+}
+
+.Status-control-button{
+  font-size: 180%;
+  color: black;
+	background-color: white;
+  /*padding: auto;*/
+}
+
+.Status-keyword{
+	font-style: italic;
+	color: black;
+	font-size: 28px;
+	/*padding: auto;*/
+}
+.headline{
+	width: 98%;
+	height: auto;
+	background-color: white;
+}
+
+.file-name{
+	font-size: 140%;
+	color: red;
+	display: inline-block;
+}
+/* The div for the major block of login page*/
+.login-main-part{
+	width: 90%;
+	height: auto;
+  line-height: 35px;
+	margin: auto;
+	border: 1px solid black;
+	background-color: yellow;
+	padding-left:6px;
+}
+
+#demo{
+	color:blue;
+}
+/* The div for the major block of status and control page*/
+#caculator-main-part{
+	margin-left: 300px;
+	margin-right: 300px;
+	border: 1px solid black;
+	background-color: yellow;
+	/*padding-top: % 0.1;*/
+	margin: auto;
+	width: 98%;
+	height: auto;
+	padding-left:6px;
+  line-height: 40%;
+}
