@@ -1,3 +1,5 @@
+Marquee3k.init();
+
 var roundNumber = 1;
 var studentNumber;
 var csvData;
@@ -11,8 +13,8 @@ imageDiv = document.getElementById("image_div");
 
 refreshPage = function (){
   roundNumber = document.getElementById('round').value
-  console.log("Round Number: " + roundNumber)
-  document.getElementById('roundTitle').innerHTML = "Round Number " + roundNumber;
+  console.log("Round #: " + roundNumber)
+  document.getElementById('roundTitle').innerHTML = "Round # " + roundNumber;
   document.getElementById('roundsetdiv').hidden = true;
 }
 
@@ -29,10 +31,10 @@ function loadFileAsText(){
       csvData = results;
       studentNumber = csvData.data.length;
       console.log(results);
-      console.log('Total number of students: ' + studentNumber)
+      console.log('Total # of students: ' + studentNumber)
       document.getElementById("rafflebutton").hidden = false
-      document.getElementById("raffleIntro").innerHTML = "<h3>Round Number: " + roundNumber + "</h3>"
-      + "<h3>Number of players: " + studentNumber + "</h3>"
+      document.getElementById("raffleIntro").innerHTML = "<h3>Round #: " + roundNumber + "</h3>"
+      + "<h3># of players: " + studentNumber + "</h3>"
   	}
   });
   document.getElementById('filediv').hidden = true;
@@ -60,7 +62,7 @@ function showResults(){
   //show results
   var thirdname = csvData.data[thirdPrize][0];
   var thirdPhoto = csvData.data[thirdPrize][1];
-  var thirdpath = "/Users/kinfeiyang/Desktop/wucc raffle/photo/" + thirdPhoto;
+  var thirdpath = "photo/" + thirdPhoto;
   var thirdImageDiv = document.getElementById("third_img");
   thirdImageDiv.innerHTML = ""
   var image = document.createElement("img");
@@ -77,7 +79,7 @@ function showResults(){
     document.getElementById('second').hidden = false;
     var secondname = csvData.data[secondPrize][0];
     var secondPhoto = csvData.data[secondPrize][1];
-    var secondpath = "/Users/kinfeiyang/Desktop/wucc raffle/photo/" + secondPhoto;
+    var secondpath = "photo/" + secondPhoto;
     var secondImageDiv = document.getElementById("second_img");
     secondImageDiv.innerHTML = ""
     var image2 = document.createElement("img");
@@ -91,7 +93,7 @@ function showResults(){
     document.getElementById('first').hidden = false;
     var firstname = csvData.data[firstPrize][0];
     var firstPhoto = csvData.data[firstPrize][1];
-    var firstpath = "/Users/kinfeiyang/Desktop/wucc raffle/photo/" + firstPhoto;
+    var firstpath = "photo/" + firstPhoto;
     var firstImageDiv = document.getElementById("first_img");
     firstImageDiv.innerHTML = ""
     var image1 = document.createElement("img");
@@ -117,7 +119,7 @@ function helper(){
     var photoName = csvData.data[studentid][1];
 
     //update image
-    var filePath = "/Users/kinfeiyang/Desktop/wucc raffle/photo/" + photoName;
+    var filePath = "photo/" + photoName;
     imageDiv.innerHTML = ""
     var image = document.createElement("img");
     image.setAttribute('src',filePath)
