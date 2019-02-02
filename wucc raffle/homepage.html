@@ -4,42 +4,55 @@
 <head>
 <meta charset = "utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel = "stylesheet" type = "text/css" href = "Style.css">
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link rel = "stylesheet" type = "text/css" href = "styles.css">
 <title> WUCC Raffle </title>
-
 </head>
 
 <!-- body part -->
 <body>
+<div class="left">
+  <div class="marquee3k" data-speed="0.3">
+    <h1>新年快乐&nbsp;</h2>
+  </div>
+</div>
+<div class="right">
+  <div class="marquee3k" data-speed="0.3">
+    <h1>拱拱福气&nbsp;</h2>
+  </div>
+</div>
 
-<h2 id = 'roundTitle'> Round Number </h2>
+<h2 id = 'roundTitle'> Round # </h2>
 
-<div id = 'roundsetdiv'>
-<input type = 'text' id = 'round'></input>
-
-<button id = "refresh-button"> update </button>
+<div class="input-group mb-3" id ='roundsetdiv'>
+  <div class="input-group-prepend">
+    <span class="input-group-text">Round</span>
+  </div>
+  <input type="text" id='round' class="form-control">
+  <div class="input-group-append">
+    <button class="btn btn-secondary" id="refresh-button">Update</button>
+  </div>
 </div>
 
 <br>
 <!-- file and image div -->
-<div id = 'filediv'>
-<tr>
-  <td>Select a File to Load:</td>
-  <td><input type="file" id="fileToLoad"></td>
-  <td><button onclick="loadFileAsText()">Load Selected File</button><td>
-</tr>
+
+<div id ='filediv' class="input-group mb-3">
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="fileToLoad">
+    <label class="custom-file-label" for="fileToLoad">Choose file</label>
+  </div>
+  <div class="input-group-append">
+    <button class="btn btn-secondary" id="fileToLoadAddon02" onclick="loadFileAsText()">Upload</button>
+  </div>
 </div>
 
 
 <div id = "setuptDiv">
-  <div id = "raffleIntro"> </div>
-
+  <div id = "raffleIntro"></div>
   <div id = "image_div"></div>
-
   <div id = "student_name"></div>
-
-  <button onclick = "updateData()" id = "rafflebutton" hidden>Start</button>
+  <button onclick = "updateData()" id ="rafflebutton" class ="btn" hidden>Start</button>
 </div>
 
 
@@ -61,7 +74,7 @@
   </div>
 </div>
 
-
+<script src="marquee3k.js"></script>
 <script src = "PapaParse-4.5.0/papaparse.min.js"></script>
 <script src = "raffleJS.js"> </script>
 </body>
